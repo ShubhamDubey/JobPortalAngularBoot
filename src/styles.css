@@ -1,7 +1,10 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "../src/assets/css/main.css";
+
+/* @import "../src/assets/css/util.css";
+@import "../src/assets/css/select2.min.css"; */
 
 :root {
     --primary-color: rgb(242, 101, 34);
 }
 
-/* @import "../src/assets/css/navstyle.css"; */
