@@ -1,1 +1,6 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+:root {
+    --primary-color: rgb(242, 101, 34);
+}
+
+/* @import "../src/assets/css/navstyle.css"; */

@@ -1,6 +1,8 @@
-/* @import "../../assets/css/navstyle.css"; */
-
 /* Navbar Start */
+
+:root {
+    --primary-color: rgb(242, 101, 34);
+}
 
 .navbar {
     background-color: var(--primary-color);
