@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "JobPortalAngularBoot"
+    }
+  },
+  "defaultProject": "JobPortalAngularBoot",
+  "cli": {
+    "analytics": false
+  }
 }
