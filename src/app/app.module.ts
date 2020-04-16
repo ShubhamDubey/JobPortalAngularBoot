@@ -12,6 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { JobSeekerProfileComponent } from './job-seeker-profile/job-seeker-profile.component';
 import { RecruiterProfileComponent } from './recruiter-profile/recruiter-profile.component';
+import { JobSeekerRegistrationComponent } from './job-seeker-registration/job-seeker-registration.component';
+import { RecruiterRegistrationComponent } from './recruiter-registration/recruiter-registration.component';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { RecruiterProfileComponent } from './recruiter-profile/recruiter-profile
     LoginComponent,
     JobSeekerProfileComponent,
     RecruiterProfileComponent,
+    JobSeekerRegistrationComponent,
+    RecruiterRegistrationComponent,
 
   ],
   imports: [
