@@ -15,6 +15,7 @@ import { RecruiterProfileComponent } from './recruiter-profile/recruiter-profile
 import { JobSeekerRegistrationComponent } from './job-seeker-registration/job-seeker-registration.component';
 import { RecruiterRegistrationComponent } from './recruiter-registration/recruiter-registration.component';
 import { PostedJobsComponent } from './posted-jobs/posted-jobs.component';
+import { ManagePostedJobComponent } from './manage-posted-job/manage-posted-job.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { PostedJobsComponent } from './posted-jobs/posted-jobs.component';
     JobSeekerRegistrationComponent,
     RecruiterRegistrationComponent,
     PostedJobsComponent,
+    ManagePostedJobComponent,
 
   ],
   imports: [
