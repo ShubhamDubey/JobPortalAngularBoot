@@ -10,19 +10,19 @@ import { Observable } from 'rxjs';
 export class LoginService {
   private baseUrl = 'http://localhost:8080/api/';
   constructor(private http: HttpClient) { }
-  public userLogin(user:Users):Observable<any> {
+  public userLogin(user: Users): Observable<any> {
 
-  return this.http.post(this.baseUrl + "users/login", user);
+    return this.http.post(this.baseUrl + "users/login", user);
   }
 
-  isUserLoggedIn(){
+  isUserLoggedIn() {
 
     let user = sessionStorage.getItem('username')
-    console.log(!(user=== null))
+    // console.log(!(user=== null))
     return !(user === null)
   }
 
-  logOut(){
+  logOut() {
 
     sessionStorage.removeItem('username')
   }
