@@ -21,6 +21,12 @@ export class LoginService {
     // console.log(!(user=== null))
     return !(user === null)
   }
+  
+  checkRole(): boolean {
+    let role = sessionStorage.getItem("role");
+    return (role === "Recruiter");
+  }
+
 
   logOut() {
 
