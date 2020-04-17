@@ -10,7 +10,7 @@
       <div class="collapse navbar-collapse" id="nvbCollapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active pl-1"><a class="nav-link" *ngIf="!loginService.isUserLoggedIn()"
-            routerLink="recruiter"><i class="fa fa-user-plus fa-fw mr-1"></i>Recruiter</a></li>
+              routerLink="recruiter"><i class="fa fa-user-plus fa-fw mr-1"></i>Recruiter</a></li>
           <li class="nav-item active pl-1"><a class="nav-link" *ngIf="!loginService.isUserLoggedIn()"
               routerLink="registration"><i class="fa fa-user-plus fa-fw mr-1"></i>Register</a></li>
           <li class="nav-item pl-1"><a class="nav-link" href="about.html"><i
@@ -18,8 +18,10 @@
           </li>
           <li class="nav-item pl-1"><a class="nav-link" *ngIf="!loginService.isUserLoggedIn()" routerLink="login"><i
                 class="fa fa-sign-in fa-fw mr-1"></i>Login</a></li>
-          <li class="nav-item pl-1"><a class="nav-link" *ngIf="loginService.isUserLoggedIn()" routerLink="" (click)="logout()"><i
-                class="fa fa-sign-in fa-fw mr-1"></i>logout</a></li>
+          <li class="nav-item pl-1"><a class="nav-link" *ngIf="loginService.isUserLoggedIn()" routerLink="postedjobs"
+              ><i class="fa fa-sign-in fa-fw mr-1"></i>My Jobs</a></li>
+          <li class="nav-item pl-1"><a class="nav-link" *ngIf="loginService.isUserLoggedIn()" routerLink=""
+              (click)="logout()"><i class="fa fa-sign-in fa-fw mr-1"></i>logout</a></li>
         </ul>
       </div>
     </div>

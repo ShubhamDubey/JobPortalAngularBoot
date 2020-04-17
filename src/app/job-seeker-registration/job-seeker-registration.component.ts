@@ -11,7 +11,7 @@ import { Users } from '../users';
 })
 export class JobSeekerRegistrationComponent implements OnInit {
 jobSeeker:Users=new Users();
-
+message:string;
   constructor(public registrationService:RegistrationService,public router:Router ) { }
 
   ngOnInit(): void {
@@ -19,9 +19,19 @@ jobSeeker:Users=new Users();
 public register()
 {
   this.jobSeeker.recruiter=null;
+  this.jobSeeker.role="JobSeeker";
     //console.log(this.jobSeeker);
   //  let resp=
     let resp=this.registrationService.jobSeekerRegistration(this.jobSeeker);
    resp.subscribe(data=>{console.log(data);});
+
+   if(resp!=null)
+   {
+     this.router.navigate(['login']);
+   }
+   else
+   {
+     this.message='Try Again Later';
+   }
 }
 }

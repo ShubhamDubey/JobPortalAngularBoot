@@ -8,6 +8,7 @@ export class Users {
   password:string;
   jobseeker:JobSeeker;
   recruiter:Recruiter;
+  role:string;
   constructor()
   {
     this.jobseeker=new JobSeeker();
