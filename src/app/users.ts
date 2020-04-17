@@ -8,4 +8,9 @@ export class Users {
   password:string;
   jobSeeker:JobSeeker;
   recruiter:Recruiter;
+  constructor()
+  {
+    this.jobSeeker=new JobSeeker();
+    this.recruiter=new Recruiter();
+  }
 }
