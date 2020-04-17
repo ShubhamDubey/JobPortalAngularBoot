@@ -5,6 +5,7 @@ import { JobSeekerProfileComponent } from './job-seeker-profile/job-seeker-profi
 import { RecruiterProfileComponent } from './recruiter-profile/recruiter-profile.component';
 import { JobSeekerRegistrationComponent } from './job-seeker-registration/job-seeker-registration.component';
 import { RecruiterRegistrationComponent } from './recruiter-registration/recruiter-registration.component';
+import { PostedJobsComponent } from './posted-jobs/posted-jobs.component';
 
 
 
@@ -35,6 +36,11 @@ const routes: Routes = [
   {
     path: 'recruiterprofile',
     component: RecruiterProfileComponent,
+    data: { title: 'profile | JobBazar' },
+  },
+  {
+    path: 'postedjobs',
+    component: PostedJobsComponent,
     data: { title: 'profile | JobBazar' },
   }
 ];
