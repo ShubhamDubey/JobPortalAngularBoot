@@ -1202,7 +1202,7 @@ button.close {
     appearance: none;
     box-shadow: 0 0 0 transparent;
     -webkit-user-select: none;
-    background-image: url(../imags/down.png);
+    /* background-image: url(../imags/down.png); */
     background-position: center right;
     background-repeat: no-repeat
 }
@@ -1725,7 +1725,7 @@ button.close {
     appearance: none;
     box-shadow: 0 0 0 transparent;
     -webkit-user-select: none;
-    background-image: url(../imags/down.png);
+    /* background-image: url(../imags/down.png); */
     background-position: center right;
     background-repeat: no-repeat
 }
@@ -2213,7 +2213,7 @@ button.close {
 }
 
 #Jobtend {
-    background: url(../imags/jobs.jpg) center top no-repeat fixed;
+    /* background: url(../imags/jobs.jpg) center top no-repeat fixed; */
     background-size: cover;
     position: relative
 }
@@ -2315,7 +2315,7 @@ button.close {
 }
 
 #v2-Jobtend {
-    background: url(../imags/jobs2.jpg) center top no-repeat fixed;
+    /* background: url(../imags/jobs2.jpg) center top no-repeat fixed; */
     background-size: cover;
     position: relative
 }
@@ -2953,7 +2953,7 @@ button.close {
 }
 
 #Best-Place-to-Find-Jobs .Best-Place-to-Find-Jobs-image {
-    background-image: url(../imags/Best-Place-to-Find-Jobs.jpg);
+    /* background-image: url(../imags/Best-Place-to-Find-Jobs.jpg); */
     background-size: 50% auto;
     position: relative;
     background-repeat: no-repeat;
@@ -3635,7 +3635,7 @@ button.close {
         margin-bottom: 30px
     }
     #Best-Place-to-Find-Jobs .Best-Place-to-Find-Jobs-image {
-        background-image: url(../imags/Best-Place-to-Find-Jobs.html);
+        /* background-image: url(../imags/Best-Place-to-Find-Jobs.html); */
         background-size: 50% auto;
         position: relative;
         background-repeat: no-repeat;
