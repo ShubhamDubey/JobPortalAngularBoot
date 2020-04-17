@@ -26,7 +26,8 @@ export class LoginComponent implements OnInit {
   public login() {
 
     let resp = this.loginservice.userLogin(this.users);
-    resp.subscribe(data => {
+    
+    resp.subscribe(data => {console.log(data);
       if(data!=null){
       if (data.recruiter == null) {
         sessionStorage.setItem('username',data.jobSeeker);
