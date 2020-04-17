@@ -7,8 +7,7 @@ import { JobSeekerRegistrationComponent } from './job-seeker-registration/job-se
 import { RecruiterRegistrationComponent } from './recruiter-registration/recruiter-registration.component';
 import { PostedJobsComponent } from './posted-jobs/posted-jobs.component';
 import { ManagePostedJobComponent } from './manage-posted-job/manage-posted-job.component';
-
-
+import { PostJobComponent } from './post-job/post-job.component';
 
 const routes: Routes = [
   // { path: '' },
@@ -55,15 +54,23 @@ const routes: Routes = [
     //     component: ManagePostedJobComponent,
     //     data: { title: 'Manage Job | JobBazar' },
     //   },
-
     // ]
   },
+
   {
     path: 'managepostedjob',
     component: ManagePostedJobComponent,
-     // Use below syntax to pass the job id
+    // Use below syntax to pass the job id
     data: { title: 'Manage Job | JobBazar' },
   },
+
+  {
+    path: 'postjob',
+    component: PostJobComponent,
+    // Use below syntax to pass the job id
+    data: { title: 'Manage Job | JobBazar' },
+  },
+
 ];
 
 @NgModule({

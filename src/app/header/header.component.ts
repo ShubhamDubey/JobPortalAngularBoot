@@ -9,9 +9,12 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public loginService: LoginService, public router: Router) { }
+  constructor(public loginService: LoginService, public router: Router) {
+  
+   }
 
   ngOnInit(): void {
+    
   }
   public logout() {
     this.loginService.logOut();
