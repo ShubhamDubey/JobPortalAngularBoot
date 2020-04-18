@@ -18,12 +18,33 @@
                     <!-- <i class="fa fa-map-marker"></i> -->
                     <span class="text font-size"> 11907 Doyle Cape Cydneyview</span>
                     <div class="float-right margin-top text-align-center">
-                        <a routerLink="/managepostedjob" class="part-full-time">Manage</a>
+                        <a routerLink="/+managepostedjob" class="part-full-time">Manage</a>
                         <p class="date-time">Deadline: May 23, 2018</p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="detail" *ngFor="let item of recruiter.recruiter.jobList">
+            <div class="media display-inline text-align-center">
+                <img src="assets/images/amazon-icone.png" alt="John Doe" class="mr-3"
+                    style="width: 75px; height: 75px;">
+                <div class="media-body text-left  text-align-center">
+                    <h6> <a href="#" class="font-color-black">{{ item.name }}</a></h6>
+                    <!-- <i class="fa fa-briefcase"></i> -->
+                    <span class="text">Type : {{item.type}} Vacancy: {{item.vacancy}}</span>
+                    <br />
+                    <!-- <i class="fa fa-map-marker"></i> -->
+                    <span class="text font-size">{{ item.description }}</span>
+                    <div class="float-right margin-top text-align-center">
+                        <a routerLink="/+managepostedjob" class="part-full-time">Manage</a>
+                        <p class="date-time">Deadline: {{ item.expireDate }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="vertical-space-20"></div>
         <div class="vertical-space-25"></div>
     </div>
