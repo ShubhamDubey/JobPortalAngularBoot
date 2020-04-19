@@ -21,12 +21,18 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
-
-  public login() {
+irk()
+{
+  console.log("Hello");
+}
+irk1()
+{
+  console.log("Hello1");
+}
+login() {
 
     let resp = this.loginservice.userLogin(this.users);
-    
+
     resp.subscribe(data => {console.log(data);
       if(data!=null){
       if (data.recruiter == null) {
@@ -46,7 +52,7 @@ export class LoginComponent implements OnInit {
 
     if(resp==null)
     {
-      console.log("Fuck Off");
+
     }
 
   }
