@@ -6,17 +6,18 @@
             <div class="login100-pic js-tilt" data-tilt>
                 <img alt="img" src="/assets/images/img-01.png" />
             </div>
-            <form  (action)="irk1()" cssClass="login100-form validate-form" ngNativeValidate>
+            <form (action)="irk1()" Class="login100-form validate-form" ngNativeValidate>
                 <span class="login100-form-title" style="color: red">
-                   {{message}}
+                    {{message}}
 
                 </span>
                 <span class="login100-form-title">
-                    Member Login
+                    Recruiter Login
                 </span>
 
                 <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                    <input class="input100" type="email" title="Valid email is required: ex@abc.xyz" required [(ngModel)]="users.email" name="email" placeholder="Email">
+                    <input class="input100" type="email" title="Valid email is required: ex@abc.xyz" required
+                        [(ngModel)]="users.email" name="email" placeholder="Email">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -24,7 +25,8 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Password is required">
-                    <input class="input100" type="password"  required [(ngModel)]="users.password" name="password" placeholder="Password">
+                    <input class="input100" type="password" required [(ngModel)]="users.password" name="password"
+                        placeholder="Password">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
                         <i class="fa fa-lock" aria-hidden="true"></i>
@@ -32,10 +34,10 @@
                 </div>
 
                 <div class="container-login100-form-btn">
-                    <button type="submit" class="login100-form-btn" >
-                    Login
-                </button>
-                </div>
+                    <button type="submit" class="login100-form-btn">
+                        Login
+                    </button>
+                </div><br>
 
                 <div class="text-center p-t-12">
                     <span class="txt1">
@@ -47,7 +49,7 @@
                 </div>
 
                 <div class="text-center p-t-8">
-                    <a class="txt2" href="showRegisterForm">
+                    <a class="txt2" routerLink="/register">
                         Go to Registration
                         <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                     </a>

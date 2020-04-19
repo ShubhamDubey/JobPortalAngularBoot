@@ -18,15 +18,15 @@ const routes: Routes = [
     component: LoginComponent,
     data: { title: 'Login | JobBazar' },
   },
+  // {
+  //   path: 'registration',
+  //   component: JobSeekerRegistrationComponent,
+  //   data: { title: 'Login | JobBazar' },
+  // },
   {
-    path: 'registration',
-    component: JobSeekerRegistrationComponent,
-    data: { title: 'Login | JobBazar' },
-  },
-  {
-    path: 'recruiter',
+    path: 'register',
     component: RecruiterRegistrationComponent,
-    data: { title: 'Login | JobBazar' },
+    data: { title: 'Register | JobBazar' },
   },
   {
     path: 'jsprofile',
