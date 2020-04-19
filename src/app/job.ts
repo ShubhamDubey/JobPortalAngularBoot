@@ -7,10 +7,10 @@ export class Job {
     vacancy: string;
     type: String;
     description: string;
-    advertiseDate :any;
-    expireDate :any;
+    advertiseDate :string;
+    expireDate :string;
     employerEmail: String;
-    recruiter: Recruiter;
+    recruiter: number;
     logo: string;
     public setDates()
     {

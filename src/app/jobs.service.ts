@@ -10,10 +10,10 @@ export class JobsService {
   private baseUrl = 'http://localhost:8080/api/';
   constructor(private http: HttpClient) { }
 
-  public jobPost(user: Recruiter){
+  public jobPost(job){
     console.log("JobPost Called From JobService");
-    console.log(user);
-   let jobList=this.http.post("http://localhost:8080/api/jobs/postjob",user);
+    console.log(job);
+   let jobList=this.http.post("http://localhost:8080/api/jobs/postjob",job);
    console.log("JobList");
    jobList.subscribe(data=>console.log(data));
 

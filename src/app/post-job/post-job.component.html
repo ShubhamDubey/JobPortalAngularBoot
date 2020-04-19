@@ -1,52 +1,76 @@
 <section id="post_job">
-    <div class="vertical-space-100"></div>
-    <div class="container">
+  <div class="vertical-space-100"></div>
+  <div class="container">
 
-        <div class="vertical-space-60">
+    <div class="vertical-space-60">
 
 
+    </div>
+    <div class="job-post-box">
+      <!-- Angular adds the novalidate attribute to your forms automatically when using the
+        template driven approach. That's why you're not prevented from submitting.
+        But if you want browser validation then add ngNativeValidate attribute in your form. -->
+      <form ngNativeValidate (action)="onPostJob()">
+        <div class="form-group">
+          <label for="exampleInputJobtitle">Job title </label>
+          <input type="text" class="form-control" id="exampleInputJobtitle" [(ngModel)]="postedJob.name" name="name"
+            placeholder="Enter your job title" required />
         </div>
-        <div class="job-post-box">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group">
+              <label for="exampleInputCompany">Company</label>
+              <input type="text" class="form-control" id="exampleInputCompany" placeholder="Full name of company"
+                required [(ngModel)]="postedJob.employerEmail" name="employerEmail" />
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group">
+              <label for="exampleInputLoction">Loction</label>
+              <input type="text" class="form-control" id="exampleInputLoction" placeholder="Company Address" required />
+            </div>
+          </div>
+        </div>
 
-            <form>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group ">
+              <label>Company Logo</label>
+              <div class="box text-center">
+                <input type="file" name="file-5[]" id="file-5" class="inputfile inputfile-4"
+                  data-multiple-caption="{count} files selected" multiple [(ngModel)]="postedJob.logo" name="logo" />
+                <label for="file-5">
+                  <i>
+                    <img src="imags/job-post.png" class="imtges" alt="">
+                  </i>
+                  <span>Drop your file here, or <i class="font-color-orange">Browse</i></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="row">
+              <div class="col-lg-12 col-md-12">
                 <div class="form-group">
-                    <label for="exampleInputJobtitle">Job title   </label>
-                    <input type="text" class="form-control" id="exampleInputJobtitle" [(ngModel)]="postedJob.name"  name="name"  placeholder="Enter your job title"
-                        required />
+                  <label for="exampleInputCompany">Type</label>
+                  <input type="text" class="form-control" id="exampleInputCompany" placeholder="Eg: IT/Electronics"
+                    required [(ngModel)]="postedJob.employerEmail" name="employerEmail" />
                 </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-group">
-                            <label for="exampleInputCompany">Company</label>
-                            <input type="text" class="form-control" id="exampleInputCompany"
-                                placeholder="Full name of company" required  [(ngModel)]="postedJob.employerEmail"  name="employerEmail"/>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-group">
-                            <label for="exampleInputLoction">Loction</label>
-                            <input type="text" class="form-control" id="exampleInputLoction"
-                                placeholder="Company Address" required />
-                        </div>
-                    </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 col-md-12">
+                <div class="form-group">
+                  <label for="exampleInputLoction">Vacancy</label>
+                  <input type="number" class="form-control" id="exampleInputLoction"
+                    placeholder="Enter max candidates required" required />
                 </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-group ">
-                            <label>Company Logo</label>
-                            <div class="box text-center">
-                                <input type="file" name="file-5[]" id="file-5" class="inputfile inputfile-4"
-                                    data-multiple-caption="{count} files selected" multiple   [(ngModel)]="postedJob.logo"  name="logo" />
-                                <label for="file-5">
-                                    <i>
-                                        <img src="imags/job-post.png" class="imtges" alt="">
-                                    </i>
-                                    <span>Drop your file here, or <i class="font-color-orange">Browse</i></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="col-lg-6 col-md-6">
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-6 col-md-6">
                         <div class="form-group">
                             <label>Document</label>
                             <div class="box text-center">
@@ -61,14 +85,15 @@
                             </div>
                         </div>
                     </div> -->
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputLongDescription">Write Description</label>
-                    <textarea class="form-control large" id="exampleInputLongDescription" maxlength="255"
-                        placeholder="Write short description" rows="3" required [(ngModel)]="postedJob.description"  name="description"></textarea>
-                </div>
-                <div class="row">
-                    <!-- <div class="col-lg-6 col-md-12">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputLongDescription">Write Description</label>
+          <textarea class="form-control large" id="exampleInputLongDescription" maxlength="255"
+            placeholder="Write short description" rows="3" required [(ngModel)]="postedJob.description"
+            name="description"></textarea>
+        </div>
+        <div class="row">
+          <!-- <div class="col-lg-6 col-md-12">
                         <div class="form-group mybtn" id="Job-Nature">
                             <label>Job Nature</label>
                             <div class="row">
@@ -84,26 +109,33 @@
                             </div>
                         </div>
                     </div> -->
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-group">
-                            <label for="exampleInputCompany">Salary</label>
-                            <input type="text" class="form-control" id="exampleInputCompany"
-                                placeholder="Enter Salary Range" required [(ngModel)]="postedJob.salary"  name="salary"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Agree with term and conditions</label>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input " id="exampleCheck1" required />
-                        <label class="form-check-label text-left" for="exampleCheck1">Lorem ipsum tempus amet conubia
-                            adipiscing fermentum viverra gravida, mollis suspendisse pretium dictumst inceptos mattis
-                            euismod lorem nulla magna duis nostra sodales luctus nulla</label>
-                    </div>
-                </div>
-                <button type="submit" (click)="onPostJob()" class="btn Post-Job-Offer">Post Job Offer</button>
-            </form>
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group">
+              <label for="exampleInputCompany">Salary</label>
+              <input type="text" class="form-control" id="exampleInputCompany" placeholder="Enter Salary Range" required
+                [(ngModel)]="postedJob.salary" name="salary" />
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group">
+              <label for="exampleInputCompany">Expire Date</label>
+              <input type="datetime-local" class="form-control" id="exampleInputCompany"
+                placeholder="Enter Salary Range" required [(ngModel)]="expireDate" name="expireDate" />
+            </div>
+          </div>
         </div>
+        <div class="form-group">
+          <label>Agree with term and conditions</label>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input " id="exampleCheck1" required />
+            <label class="form-check-label text-left" for="exampleCheck1">Lorem ipsum tempus amet conubia
+              adipiscing fermentum viverra gravida, mollis suspendisse pretium dictumst inceptos mattis
+              euismod lorem nulla magna duis nostra sodales luctus nulla</label>
+          </div>
+        </div>
+        <button type="submit" class="btn Post-Job-Offer">Post Job Offer</button>
+      </form>
     </div>
+  </div>
 </section>
 <div class="vertical-space-100"></div>
