@@ -14,10 +14,10 @@ export class PostedJobsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.recruiter.recruiter.jobList = 
+    // this.recruiter.recruiter.jobList =
     console.log(this.recruiter);
-    this.jobService.jobPost(this.recruiter.recruiter).subscribe(data=>
-    console.log(data));
+    // this.jobService.postedJob(this.recruiter.recruiter).subscribe(data=>
+    // console.log(data));
   }
 
 }

@@ -7,10 +7,13 @@ export class Job {
     vacancy: string;
     type: String;
     description: string;
-    advertiseDate = new Date();
-    expDate = new Date();
+    advertiseDate :any;
+    expireDate :any;
     employerEmail: String;
     recruiter: Recruiter;
     logo: string;
-
+    public setDates()
+    {
+     var currentDate=new Date();
+    this.advertiseDate=currentDate.toLocaleDateString();    }
 }
