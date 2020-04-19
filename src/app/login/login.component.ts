@@ -21,37 +21,36 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
 
   }
-irk()
-{
-  console.log("Hello");
-}
-irk1()
-{
-  console.log("Hello1");
-}
-login() {
+  irk() {
+    console.log("Hello");
+  }
+  irk1() {
+    console.log("Hello1");
+  }
+  login() {
 
     let resp = this.loginservice.userLogin(this.users);
 
-    resp.subscribe(data => {console.log(data);
-      if(data!=null){
-      if (data.recruiter == null) {
-        sessionStorage.setItem('username',JSON.stringify(data));
-        sessionStorage.setItem('role',"JobSeeker");
+    resp.subscribe(data => {
+      console.log(data);
+      if (data != null) {
+        if (data.recruiter == null) {
+          sessionStorage.setItem('username', JSON.stringify(data));
+          sessionStorage.setItem('role', "JobSeeker");
 
-        this.router.navigate(['jsprofile']);
+          this.router.navigate(['jsprofile']);
+        }
+        else {
+          sessionStorage.setItem('username', JSON.stringify(data));
+          sessionStorage.setItem('role', "Recruiter");
+          this.router.navigate(['postedjobs']);
+
+        }
       }
-      else {
-        sessionStorage.setItem('username',JSON.stringify(data));
-        sessionStorage.setItem('role',"Recruiter");
-        this.router.navigate(['recruiterprofile']);
-
-       }
-    }}
+    }
     );
 
-    if(resp==null)
-    {
+    if (resp == null) {
 
     }
 

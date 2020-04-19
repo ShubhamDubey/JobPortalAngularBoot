@@ -10,7 +10,7 @@
       <!-- Angular adds the novalidate attribute to your forms automatically when using the
         template driven approach. That's why you're not prevented from submitting.
         But if you want browser validation then add ngNativeValidate attribute in your form. -->
-      <form id='form' ngNativeValidates (action)="onPostJob()">
+      <form ngNoForm>
         <div class="form-group">
           <label for="exampleInputJobtitle">Job title </label>
           <input type="text" class="form-control" id="exampleInputJobtitle" [(ngModel)]="postedJob.name" name="name"
@@ -116,7 +116,7 @@
           </div>
         </div>
 
-        <button type="submit" class="btn Post-Job-Offer">Post Job
+        <button (click)="onPostJob()" class="btn Post-Job-Offer">Post Job
           Offer</button>
       </form>
     </div>
