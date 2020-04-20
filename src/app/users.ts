@@ -6,12 +6,10 @@ export class Users {
   id:number;
   email:string;
   password:string;
-  jobseeker:JobSeeker;
-  recruiter:Recruiter;
+  firstName:string;
+  lastName:String;
   role:string;
   constructor()
   {
-    this.jobseeker=new JobSeeker();
-    this.recruiter=new Recruiter();
   }
 }

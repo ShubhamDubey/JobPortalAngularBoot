@@ -10,8 +10,8 @@ import { Observable } from 'rxjs';
 export class LoginService {
   private baseUrl = 'http://localhost:8080/api/';
   constructor(private http: HttpClient) { }
-  public userLogin(user: Users): Observable<any> {
-
+  public userLogin(user): Observable<any> {
+console.log(user);
     return this.http.post(this.baseUrl + "users/login", user);
   }
 
@@ -19,10 +19,10 @@ export class LoginService {
 
     let user = sessionStorage.getItem('username')
     // console.log(!(user=== null))
-    
+
     return !(user === null)
   }
-  
+
   checkRole(): boolean {
     let role = sessionStorage.getItem("role");
     return (role === "Recruiter");

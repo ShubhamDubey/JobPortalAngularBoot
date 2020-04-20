@@ -18,7 +18,7 @@ message:string;
   ngOnInit(): void {
   }
  public register(){
-   this.recruiter.jobseeker=null;
+
    this.recruiter.role="recruiter";
   let resp=this.registrationService.recruiterRegistration(this.recruiter);
   resp.subscribe(data=>{console.log(data);});

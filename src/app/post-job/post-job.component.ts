@@ -10,9 +10,9 @@ import { JobsService } from '../jobs.service';
 export class PostJobComponent implements OnInit {
   message: string;
   postedJob: Job;
-  expireDate: Date = new Date();
+  expireDate: Date;
   constructor(private jobService: JobsService) {
-
+    this.expireDate = new Date();
   }
 
   ngOnInit(): void {
@@ -21,16 +21,15 @@ export class PostJobComponent implements OnInit {
   onPostJob() {
     //  console.log("hello");
     console.log(this.expireDate);
-    this.postedJob.expireDate = this.expireDate.toLocaleDateString();
-    console.log();
-    let currentUsers = JSON.parse(sessionStorage.getItem('username'));
-    let postedRecruiter = currentUsers.recruiter;
 
+    this.postedJob.expireDate = String(this.expireDate);
+    console.log(this.postedJob.expireDate);
+    let currentUsers = JSON.parse(sessionStorage.getItem('username'));
+    var postedRecruiter = currentUsers.id;
+    this.postedJob.recruiter = postedRecruiter;
     this.postedJob.setDates();
-    var jobList = [this.postedJob]
-    postedRecruiter.jobList = jobList;
-    //    console.log(postedRecruiter);
-    this.postedJob.recruiter = currentUsers.recruiter.id;
+
+
     this.jobService.jobPost(this.postedJob);
     //let updatedJobList=
     // console.log(updatedJobList);

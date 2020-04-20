@@ -25,7 +25,8 @@
             </div>
         </div>
 
-        <div class="detail" *ngFor="let item of recruiter.recruiter.jobList">
+        <div class="detail" *ngFor="let item of jobList|async">
+
             <div class="media display-inline text-align-center">
                 <img src="assets/images/amazon-icone.png" alt="John Doe" class="mr-3"
                     style="width: 75px; height: 75px;">

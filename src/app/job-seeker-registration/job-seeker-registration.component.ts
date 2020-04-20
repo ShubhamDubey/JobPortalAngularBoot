@@ -18,7 +18,7 @@ message:string;
   }
 public register()
 {
-  this.jobSeeker.recruiter=null;
+
   this.jobSeeker.role="JobSeeker";
     //console.log(this.jobSeeker);
   //  let resp=
