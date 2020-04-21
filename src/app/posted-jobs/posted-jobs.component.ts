@@ -10,7 +10,7 @@ import { Job } from '../job';
   styleUrls: ['./posted-jobs.component.css']
 })
 export class PostedJobsComponent implements OnInit {
-  recruiter: Observable<any>= JSON.parse(sessionStorage.getItem("username"));
+  recruiter: Observable<any>= JSON.parse(sessionStorage.getItem("session"));
   jobList:Observable<any>;
   constructor(private jobService: JobsService) {
     this.jobList=jobService.jobListPostedByRecruiter(this.recruiter);

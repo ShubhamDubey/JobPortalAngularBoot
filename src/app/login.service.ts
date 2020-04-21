@@ -17,7 +17,7 @@ console.log(user);
 
   isUserLoggedIn() {
 
-    let user = sessionStorage.getItem('username')
+    let user = sessionStorage.getItem('session')
     // console.log(!(user=== null))
 
     return !(user === null)
@@ -31,6 +31,6 @@ console.log(user);
 
   logOut() {
 
-    sessionStorage.removeItem('username')
+    sessionStorage.removeItem('session')
   }
 }

@@ -36,12 +36,12 @@ export class LoginComponent implements OnInit {
       if (data != null) {
         if (data.role == "Recruiter") {
 
-          sessionStorage.setItem('username', JSON.stringify(data));
+          sessionStorage.setItem('session', JSON.stringify(data));
           sessionStorage.setItem('role', "Recruiter");
           this.router.navigate(['postedjobs']);
         }
         else {
-          sessionStorage.setItem('username', JSON.stringify(data));
+          sessionStorage.setItem('session', JSON.stringify(data));
           sessionStorage.setItem('role', "JobSeeker");
 
           this.router.navigate(['jsprofile']);

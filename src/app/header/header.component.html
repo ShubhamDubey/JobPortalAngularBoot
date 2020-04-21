@@ -2,7 +2,8 @@
     <!--- Navbar --->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class= "navbar-brand text-white" routerLink='' (click)="redirectTo()"><i class="fa fa-graduation-cap fa-lg mr-2"></i>JobBazar</a>
+            <a class="navbar-brand text-white" routerLink='' (click)="redirectTo()"><i
+                    class="fa fa-graduation-cap fa-lg mr-2"></i>JobBazar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nvbCollapse"
                 aria-controls="nvbCollapse">
                 <span class="fa fa-bars" style="color:#ffffff;"></span>
@@ -27,8 +28,18 @@
                     <li class="nav-item pl-1"><a class="nav-link"
                             *ngIf="(loginService.checkRole() && loginService.isUserLoggedIn())" routerLink="postjob"><i
                                 class="fa fa-sign-in fa-fw mr-1"></i>Post Job</a></li>
-                    <li class="nav-item pl-1"><a class="nav-link" *ngIf="loginService.isUserLoggedIn()" routerLink=""
-                            (click)="logout()"><i class="fa fa-sign-in fa-fw mr-1"></i>logout</a></li>
+                    <li class="nav-item pl-1 dropdown" *ngIf="(loginService.checkRole() && loginService.isUserLoggedIn())">
+                        <button class="nav-link dropdown-toggle" type="button"
+                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user fa-fw mr-1"></i>{{ firstname }}</button>
+                        <div class="dropdown-menu">
+                            <a class="nav-link" > <i class="fa fa-user fa-fw mr-1"> </i>Edit Profile
+                            </a> <a class="nav-link" routerLink="" (click)="logout()"> <i class="fa fa-sign-out fa-fw mr-1"> </i>Logout
+                            </a>
+                        </div>
+                    </li>
+                    <!-- <li class="nav-item pl-1"><a class="nav-link" *ngIf="loginService.isUserLoggedIn()" routerLink=""
+                            (click)="logout()"><i class="fa fa-sign-in fa-fw mr-1"></i>logout</a></li> -->
                 </ul>
             </div>
         </div>

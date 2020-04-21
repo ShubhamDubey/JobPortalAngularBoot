@@ -25,7 +25,7 @@ export class PostJobComponent implements OnInit {
 
     this.postedJob.expireDate = String(this.expireDate);
     console.log(this.postedJob.expireDate);
-    let currentUsers = JSON.parse(sessionStorage.getItem('username'));
+    let currentUsers = JSON.parse(sessionStorage.getItem('session'));
     var postedRecruiter = currentUsers.id;
     this.postedJob.recruiter = postedRecruiter;
     this.postedJob.setDates();
