@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { JobSeekerProfileComponent } from './job-seeker-profile/job-seeker-profile.component';
-import { JobSeeker } from './job-seeker';
 import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
@@ -11,17 +9,14 @@ export class RegistrationService {
   constructor(private http: HttpClient) { }
 
   public jobSeekerRegistration(jobSeeker){
-    console.log("service calling");
-    console.log(jobSeeker);
+    // console.log("service calling");
+    // console.log(jobSeeker);
   return this.http.post('http://localhost:8080/api/users/addJobSeeker', jobSeeker);
   }
 
-
-
-
   public recruiterRegistration(recruiter){
-    console.log("service calling");
-    console.log(recruiter);
+    // console.log("service calling");
+    // console.log(recruiter);
   return this.http.post(this.baseUrl+'addRecruiter', recruiter);
   }
 }

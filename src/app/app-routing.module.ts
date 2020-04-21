@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { JobSeekerProfileComponent } from './job-seeker-profile/job-seeker-profile.component';
 import { RecruiterProfileComponent } from './recruiter-profile/recruiter-profile.component';
-import { JobSeekerRegistrationComponent } from './job-seeker-registration/job-seeker-registration.component';
 import { RecruiterRegistrationComponent } from './recruiter-registration/recruiter-registration.component';
 import { PostedJobsComponent } from './posted-jobs/posted-jobs.component';
 import { ManagePostedJobComponent } from './manage-posted-job/manage-posted-job.component';
@@ -26,11 +24,6 @@ const routes: Routes = [
     path: 'register',
     component: RecruiterRegistrationComponent,
     data: { title: 'Register | JobBazar' },
-  },
-  {
-    path: 'jsprofile',
-    component: JobSeekerProfileComponent,
-    data: { title: 'profile | JobBazar' },
   },
   {
     path: 'recruiterprofile',

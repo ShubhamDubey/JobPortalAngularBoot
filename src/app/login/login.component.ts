@@ -40,13 +40,13 @@ export class LoginComponent implements OnInit {
           sessionStorage.setItem('role', "Recruiter");
           this.router.navigate(['postedjobs']);
         }
-        else {
-          sessionStorage.setItem('session', JSON.stringify(data));
-          sessionStorage.setItem('role', "JobSeeker");
+        // else {
+        //   sessionStorage.setItem('session', JSON.stringify(data));
+        //   sessionStorage.setItem('role', "JobSeeker");
 
-          this.router.navigate(['jsprofile']);
+        //   this.router.navigate(['jsprofile']);
 
-        }
+        // }
       }
     }
     );

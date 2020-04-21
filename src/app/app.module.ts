@@ -10,9 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { LoginComponent } from './login/login.component';
-import { JobSeekerProfileComponent } from './job-seeker-profile/job-seeker-profile.component';
 import { RecruiterProfileComponent } from './recruiter-profile/recruiter-profile.component';
-import { JobSeekerRegistrationComponent } from './job-seeker-registration/job-seeker-registration.component';
 import { RecruiterRegistrationComponent } from './recruiter-registration/recruiter-registration.component';
 import { PostedJobsComponent } from './posted-jobs/posted-jobs.component';
 import { ManagePostedJobComponent } from './manage-posted-job/manage-posted-job.component';
@@ -25,9 +23,7 @@ import { PostJobComponent } from './post-job/post-job.component';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    JobSeekerProfileComponent,
     RecruiterProfileComponent,
-    JobSeekerRegistrationComponent,
     RecruiterRegistrationComponent,
     PostedJobsComponent,
     ManagePostedJobComponent,
