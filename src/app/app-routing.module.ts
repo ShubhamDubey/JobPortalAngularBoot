@@ -10,8 +10,7 @@ import { ManagePostedJobComponent } from './manage-posted-job/manage-posted-job.
 import { PostJobComponent } from './post-job/post-job.component';
 
 const routes: Routes = [
-  // { path: '' },
-
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
 
   {
     path: 'login',
