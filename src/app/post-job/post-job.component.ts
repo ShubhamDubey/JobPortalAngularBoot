@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Job } from '../job';
 import { JobsService } from '../jobs.service';
@@ -11,7 +12,7 @@ export class PostJobComponent implements OnInit {
   message: string;
   postedJob: Job;
   expireDate: Date;
-  constructor(private jobService: JobsService) {
+  constructor(private jobService: JobsService,private router:Router) {
     this.expireDate = new Date();
   }
 
@@ -31,22 +32,7 @@ export class PostJobComponent implements OnInit {
 
 
     this.jobService.jobPost(this.postedJob);
-    //let updatedJobList=
-    // console.log(updatedJobList);
-    //console.log(currentUsers.recruiter.jobList.length);
-    // if(currentUsers.recruiter.jobList.length===updatedJobList)
-    // // {
-    //   currentUsers.recruiter.jobList=updatedJobList;
-    console.log(currentUsers);
-
-    //sessionStorage.setItem('username',currentUsers);
-    this.message = "Successfully Posted";
-    // }
-    // else
-    // {
-    //   console.log(currentUsers);
-    //   this.message="Successfully Posted";
-    // }
+    this.router.navigate(['/postedjobs']);
   }
 
 
