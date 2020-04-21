@@ -1,3 +1,5 @@
+import { RecruiterService } from './../recruiter.service';
+import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecruiterProfileComponent implements OnInit {
 
-  constructor() { }
+  profileData: Object;
+  constructor(private recruiterService: RecruiterService) {
+    recruiterService.profile().subscribe(data => {
+      this.profileData=data;
+      console.log(data);
+    }
+      );
+    //  console.log(this.profileData('firstname));
+  }
 
   ngOnInit(): void {
+
   }
 
 }

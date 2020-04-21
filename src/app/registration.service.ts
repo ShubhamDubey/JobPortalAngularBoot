@@ -8,15 +8,15 @@ export class RegistrationService {
   private baseUrl = 'http://localhost:8080/api/users/';
   constructor(private http: HttpClient) { }
 
-  public jobSeekerRegistration(jobSeeker){
+  public jobSeekerRegistration(jobSeeker) {
     // console.log("service calling");
     // console.log(jobSeeker);
-  return this.http.post('http://localhost:8080/api/users/addJobSeeker', jobSeeker);
+    return this.http.post('http://localhost:8080/api/users/addJobSeeker', jobSeeker);
   }
 
-  public recruiterRegistration(recruiter){
+  public recruiterRegistration(recruiter) {
     // console.log("service calling");
     // console.log(recruiter);
-  return this.http.post(this.baseUrl+'addRecruiter', recruiter);
+    return this.http.post(this.baseUrl + 'addRecruiter', recruiter);
   }
 }

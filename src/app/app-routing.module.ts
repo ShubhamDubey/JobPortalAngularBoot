@@ -26,7 +26,7 @@ const routes: Routes = [
     data: { title: 'Register | JobBazar' },
   },
   {
-    path: 'recruiterprofile',
+    path: 'profile',
     component: RecruiterProfileComponent,
     data: { title: 'profile | JobBazar' },
   },
