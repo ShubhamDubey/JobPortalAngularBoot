@@ -9,13 +9,20 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  firstname: any;
   constructor(public loginService: LoginService, public router: Router) {
 
   }
-
   ngOnInit(): void {
-
+    // if (this.loginService.isUserLoggedIn()) {
+    //   let sess = JSON.parse(sessionStorage.getItem('session'));
+    //   this.firstname = sess['firstname'];
+    // }
+    // else {
+    //   this.firstname = "";
+    // }
   }
+  
   public logout() {
     this.loginService.logOut();
     this.router.navigate(['login']);
