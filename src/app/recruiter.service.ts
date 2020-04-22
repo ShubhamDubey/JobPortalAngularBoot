@@ -16,13 +16,13 @@ export class RecruiterService {
 
   }
   public updateProfile(profileData) {
-    console.log(profileData);
-    console.log(profileData.id);
+ 
+   
     let a= this.http.post(this.baseUrl +"recruiter/updateprofile", profileData);
     a.subscribe(data=>{console.log(data);});
   }
   public updatePassword(passwordData) {
-
+    console.log(passwordData);
     let a= this.http.post(this.baseUrl +"recruiter/changepassword", passwordData);
     a.subscribe(data=>{console.log(data);});
   }

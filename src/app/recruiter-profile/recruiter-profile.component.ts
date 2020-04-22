@@ -8,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recruiter-profile.component.css']
 })
 export class RecruiterProfileComponent implements OnInit {
-message:any;
-profileData: any;
-updatedPassword:any;
-repassword:any;
+  profilemessage: any;
+  updatepassword: any;
+  profileData: any;
+  updatedPassword: any;
+  currentpassword: any;
+  repassword: any;
   constructor(private recruiterService: RecruiterService) {
     this.profileData = new Object();
 
@@ -21,6 +23,7 @@ repassword:any;
   ngOnInit(): void {
     this.recruiterService.profile().subscribe(data => {
       this.profileData = data;
+      this.currentpassword = this.profileData.password;
       //      console.log(typeof(data));
     }
     );
@@ -28,20 +31,23 @@ repassword:any;
   public updateProfile() {
 
     this.recruiterService.updateProfile(this.profileData);
-    this.message="Profile Update Successfully";
+    this.profilemessage = "Profile Update Successfully";
+  }
+  public updatePassword() {
+    if (this.profileData.password === "") {
+      this.updatepassword = "Enter Current Password";
     }
-  public updatePassword()
-  {
-    if(this.repassword=== this.updatePassword)
-    {
-      let passwordData=new Map();
-      passwordData.set("id",this.profileData.id);
-      passwordData.set("updatepassword",this.updatePassword);
-      this.recruiterService.updatePassword(passwordData);
-    }
-    else
-    {
-      this.message="Password MisMatch";
+    else {
+      if (this.repassword === this.updatedPassword && this.profileData.password === this.currentpassword) {
+
+        this.profileData.password = this.updatedPassword;
+        this.recruiterService.updatePassword(this.profileData);
+
+        this.updatepassword = "Sucessfully update";
+      }
+      else {
+        this.updatepassword = "Password MisMatch";
+      }
     }
   }
 }
