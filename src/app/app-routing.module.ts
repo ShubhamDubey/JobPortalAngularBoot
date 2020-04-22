@@ -1,3 +1,4 @@
+import { JobApplicationsComponent } from './job-applications/job-applications.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
@@ -34,6 +35,7 @@ const routes: Routes = [
     path: 'postedjobs',
     component: PostedJobsComponent,
     data: { title: 'My Jobs | JobBazar' },
+    
     // children: [
     //   {
     //     path: '',
@@ -47,6 +49,12 @@ const routes: Routes = [
     //     data: { title: 'Manage Job | JobBazar' },
     //   },
     // ]
+  },
+  
+  {
+    path: 'applications/:id',
+    component:JobApplicationsComponent,
+    data: { title: 'Applications | JobBazar' },
   },
 
   {
