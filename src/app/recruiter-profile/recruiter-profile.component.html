@@ -19,15 +19,15 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label class="form-control-label" for="first_name">First
-                                                name </label> <input type="text" id="first_name" name="firstname"
-                                                class="form-control" value="" placeholder="First name" >
+                                                name </label> <input type="text" id="first_name" name="profileData.firstname"
+                                                class="form-control" [(ngModel)]="profileData.firstname" placeholder="First name" >
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label class="form-control-label" for="last_name">Last
-                                                name</label> <input type="text" id="last_name" name="lastname"
-                                                class="form-control" placeholder="Last name" >
+                                                name</label> <input type="text" id="last_name" name="profileData.lastname"
+                                                class="form-control" [(ngModel)]="profileData.lastname" placeholder="Last name" >
                                         </div>
                                     </div>
                                 </div>
@@ -35,8 +35,8 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label class="form-control-label" for="email">Email
-                                                address</label> <input type="email" id="email" name="email"
-                                                class="form-control" placeholder="shubham@example.com" value="">
+                                                address</label> <input type="email" id="email" name="profileData.email"
+                                                class="form-control" placeholder="shubham@example.com" [(ngModel)]="profileData.email">
                                         </div>
                                     </div>
                                 </div>

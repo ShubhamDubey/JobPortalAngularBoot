@@ -11,12 +11,13 @@ export class RecruiterProfileComponent implements OnInit {
 
   profileData: Object;
   constructor(private recruiterService: RecruiterService) {
+    this.profileData=new Object();
     recruiterService.profile().subscribe(data => {
       this.profileData=data;
-      console.log(data);
+//      console.log(typeof(data));
     }
       );
-    //  console.log(this.profileData('firstname));
+
   }
 
   ngOnInit(): void {
